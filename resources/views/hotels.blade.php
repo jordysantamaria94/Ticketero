@@ -42,7 +42,7 @@
         </div>
         <div class="row">
             @foreach ($hotels as $hotel)
-                <div class="col-4 col-sm-12 col-md-4 mt-3">
+                <div class="col-12 col-sm-12 col-md-4 mt-3">
                     <div class="card">
                         <div class="card-img-top" style="background: url({{ $hotel['image'] }})"></div>
                         <div class="card-body">
@@ -67,7 +67,7 @@
         @else
         <div class="row">
             <div class="col-12">
-                <h4>No se encontraron resultados</h4>
+                <h4>No results found</h4>
             </div>
         </div>
         @endif

@@ -2,11 +2,11 @@
 @section('content')
 <div class="container">
     <div class="row d-flex justify-content-center">
-        <div class="col-4">
+        <div class="col-12 col-md-4 col-sm-12">
             <form method="POST" action="/">
                 @csrf
                 <div class="input-group mb-3">
-                    <input type="text" class="form-control input-ticket shadow-none" name="search" placeholder="Performers or Venues" autocomplete="off" value="{{ $search }}">
+                    <input type="text" class="form-control input-ticket shadow-none" name="search" placeholder="Search Performers, Venues and Destinations" autocomplete="off" value="{{ $search }}">
                     <button class="btn btn-ticket shadow-none" type="submit" id="button-addon2"><i class="fa-solid fa-magnifying-glass"></i></button>
                 </div>
             </form>
@@ -19,7 +19,7 @@
             <span class="p-semibold">{{ $search }}</span>
         </label>
     </div>
-    <ul class="nav nav-pills justify-content-center" id="pills-tab" role="tablist">
+    <ul class="nav nav-pills justify-content-center mt-4" id="pills-tab" role="tablist">
         <li class="nav-item" role="presentation">
             <button class="nav-link active" id="pills-events-tab" data-bs-toggle="pill" data-bs-target="#pills-events" type="button" role="tab" aria-controls="pills-events" aria-selected="true">Performers</button>
         </li>
@@ -35,7 +35,7 @@
             @if (count($response['performers']) > 0)
             <div class="row mt-4">
                 @foreach ($response['performers'] as $performer)
-                    <a class="col-4 mt-3" href="event/{{ $performer['typeSearch'] }}/{{ $performer['id'] }}">
+                    <a class="col-4 col-md-4 col-sm-12 mt-3" href="event/{{ $performer['typeSearch'] }}/{{ $performer['id'] }}">
                         <div class="card">
                             <div class="card-body">
                                 <h4 class="card-title">{{ $performer['name'] }}</h4>
@@ -50,7 +50,7 @@
             @if (count($response['venues']) > 0)
             <div class="row mt-4">
                 @foreach ($response['venues'] as $venue)
-                    <a class="col-4 mt-3" href="event/{{ $performer['typeSearch'] }}/{{ $performer['id'] }}">
+                    <a class="col-12 col-md-4 col-sm-12 mt-3" href="event/{{ $venue['typeSearch'] }}/{{ $venue['id'] }}">
                         <div class="card">
                             <div class="card-body">
                                 <h4 class="card-title">{{ $venue['name'] }}</h4>
@@ -65,7 +65,7 @@
             @if (count($response['destinations']) > 0)
             <div class="row mt-4">
                 @foreach ($response['destinations'] as $destination)
-                    <a class="col-4 mt-3" href="event/{{ $destination['typeSearch'] }}/{{ $destination['id'] }}/{{ $destination['name'] }}/{{ $destination['lat'] }}/{{ $destination['lng'] }}/{{ $destination['radius'] }}">
+                    <a class="col-12 col-md-4 col-sm-12 mt-3" href="event/{{ $destination['typeSearch'] }}/{{ $destination['id'] }}/{{ $destination['name'] }}/{{ $destination['lat'] }}/{{ $destination['lng'] }}/{{ $destination['radius'] }}">
                         <div class="card">
                             <div class="card-body">
                                 <h4 class="card-title">{{ $destination['name'] }}</h4>
