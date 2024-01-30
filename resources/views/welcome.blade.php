@@ -35,7 +35,7 @@
             @if (count($response['performers']) > 0)
             <div class="row mt-4">
                 @foreach ($response['performers'] as $performer)
-                    <a class="col-4 col-md-4 col-sm-12 mt-3" href="event/{{ $performer['typeSearch'] }}/{{ $performer['id'] }}">
+                    <a class="col-12 col-md-4 col-sm-12 mt-3" href="event/{{ $performer['typeSearch'] }}/{{ $performer['id'] }}">
                         <div class="card">
                             <div class="card-body">
                                 <h4 class="card-title">{{ $performer['name'] }}</h4>

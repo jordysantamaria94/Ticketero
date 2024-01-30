@@ -12,7 +12,7 @@
             <div class="col-12 col-sm-12 col-md-6 mt-4">
                 <img src="{{ $eventDetails['map'] }}" class="img-fluid w-100">
             </div>
-            <div class="col-6 col-sm-12 col-md-6 mt-4">
+            <div class="col-12 col-sm-12 col-md-6 mt-4">
                 <div class="accordion accordion-flush" id="accordionFlushExample">
                     @foreach ($tickets as $ind => $ticket)
                     <div class="accordion-item">

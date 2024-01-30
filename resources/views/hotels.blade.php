@@ -55,7 +55,7 @@
                             </p>
                             <p class="card-text">Average: <strong>${{ $hotel['prices']['averagePrice'] }} {{ $hotel['prices']['currency'] }}</strong> / {{ $hotel['nights'] }} Night(s)</p>
                             <div class="row d-flex justify-content-end">
-                                <div class="col-3 col-sm-12 col-md-5">
+                                <div class="col-12 col-sm-12 col-md-5">
                                     <a class="btn btn-ticketero w-100" href="/reserve-room/{{ $hotel['hotel_name'] }}/{{ $hotel['location']['city_name'] }}/{{ $hotel['location']['zone_name'] }}/{{ $hotel['prices']['averagePrice'] }}/{{ $hotel['nights'] }}">Reserve</a>
                                 </div>
                             </div>
